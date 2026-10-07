@@ -1,0 +1,1734 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>مملكة الذكاء الاصطناعي | AI Kingdom</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Orbitron:wght@700;900&display=swap" rel="stylesheet">
+
+<style>
+
+/* =====================================================
+   الألوان الأساسية
+===================================================== */
+
+:root {
+    --black: #050505;
+    --black2: #0b0b0b;
+    --dark: #111111;
+
+    --red: #e50914;
+    --red-glow: #ff1a2c;
+    --dark-red: #8b0000;
+
+    --text: #f4eeee;
+    --gray: #aaa0a0;
+}
+
+/* =====================================================
+   RESET
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background:
+        radial-gradient(
+            circle at 50% -10%,
+            rgba(229,9,20,.20),
+            transparent 35%
+        ),
+        #050505;
+
+    color: var(--text);
+
+    font-family: 'Cairo', sans-serif;
+
+    overflow-x: hidden;
+}
+
+/* شبكة تقنية */
+
+body::before {
+    content: "";
+
+    position: fixed;
+
+    inset: 0;
+
+    background-image:
+        linear-gradient(
+            rgba(229,9,20,.035) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(229,9,20,.035) 1px,
+            transparent 1px
+        );
+
+    background-size: 60px 60px;
+
+    pointer-events: none;
+
+    z-index: -1;
+}
+
+/* =====================================================
+   CONTAINER
+===================================================== */
+
+.container {
+    width: min(1200px, 92%);
+    margin: auto;
+}
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    background: rgba(5,5,5,.88);
+
+    backdrop-filter: blur(18px);
+
+    border-bottom:
+        1px solid rgba(229,9,20,.30);
+
+    box-shadow:
+        0 5px 30px rgba(229,9,20,.12);
+}
+
+.nav {
+    min-height: 78px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+/* LOGO */
+
+.logo {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    text-decoration: none;
+}
+
+.logo-icon {
+    width: 46px;
+    height: 46px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 12px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #180000,
+            #8b0000
+        );
+
+    border:
+        1px solid rgba(255,70,80,.45);
+
+    box-shadow:
+        0 0 25px rgba(229,9,20,.35);
+
+    font-size: 23px;
+}
+
+.logo-text {
+    font-family: 'Cairo', sans-serif;
+
+    font-size: 18px;
+
+    font-weight: 900;
+
+    color: white;
+}
+
+.logo-text span {
+    color: var(--red-glow);
+}
+
+/* NAVIGATION */
+
+nav ul {
+    display: flex;
+
+    list-style: none;
+
+    gap: 5px;
+}
+
+nav a {
+    color: #d6cccc;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    padding: 9px 15px;
+
+    border-radius: 8px;
+
+    transition: .3s;
+}
+
+nav a:hover {
+    color: white;
+
+    background:
+        rgba(229,9,20,.10);
+
+    text-shadow:
+        0 0 12px var(--red-glow);
+}
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.hero {
+    position: relative;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: flex-start;
+
+    text-align: center;
+
+    overflow: hidden;
+
+    background: #050505;
+
+    border-bottom:
+        1px solid rgba(229,9,20,.15);
+}
+
+/* =====================================================
+   صورة الموقع
+===================================================== */
+
+.hero-image {
+    position: relative;
+
+    width: 100%;
+
+    height: 560px;
+
+    background-image:
+        linear-gradient(
+            180deg,
+            rgba(5,5,5,.03),
+            rgba(5,5,5,.08),
+            rgba(5,5,5,.55)
+        ),
+        url('sharaf.jpeg');
+
+    background-size: cover;
+
+    background-position: center;
+
+    background-repeat: no-repeat;
+
+    z-index: 0;
+}
+
+/* =====================================================
+   الكلام تحت الصورة
+===================================================== */
+
+.hero-content {
+    position: relative;
+
+    z-index: 2;
+
+    width: 100%;
+
+    padding:
+        45px 20px 60px;
+
+    background: #050505;
+}
+
+/* BADGE */
+
+.hero-badge {
+    display: inline-block;
+
+    padding: 7px 20px;
+
+    margin-bottom: 20px;
+
+    color: var(--red-glow);
+
+    background:
+        rgba(120,0,10,.15);
+
+    border:
+        1px solid rgba(255,30,45,.45);
+
+    border-radius: 30px;
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    box-shadow:
+        0 0 25px rgba(229,9,20,.12);
+}
+
+/* TITLE */
+
+.hero h1 {
+    font-family:
+        'Orbitron',
+        'Cairo',
+        sans-serif;
+
+    font-size:
+        clamp(38px, 7vw, 76px);
+
+    line-height: 1.25;
+
+    font-weight: 900;
+
+    margin-bottom: 18px;
+
+    color: white;
+
+    text-shadow:
+        0 0 25px rgba(229,9,20,.55),
+        0 5px 25px rgba(0,0,0,.9);
+}
+
+.hero h1 span {
+    color: var(--red-glow);
+
+    text-shadow:
+        0 0 25px rgba(229,9,20,.85);
+}
+
+.hero p {
+    color: #d4caca;
+
+    font-size:
+        clamp(15px, 2vw, 20px);
+
+    line-height: 2;
+
+    max-width: 780px;
+
+    margin: auto;
+}
+
+/* BUTTONS */
+
+.hero-buttons {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 15px;
+
+    margin-top: 35px;
+
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-block;
+
+    text-decoration: none;
+
+    padding: 13px 30px;
+
+    border-radius: 10px;
+
+    font-weight: 800;
+
+    transition: .3s;
+}
+
+.btn-primary {
+    color: white;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--dark-red),
+            var(--red),
+            var(--dark-red)
+        );
+
+    border:
+        1px solid rgba(255,80,90,.55);
+
+    box-shadow:
+        0 0 25px rgba(229,9,20,.35);
+}
+
+.btn-primary:hover {
+    transform:
+        translateY(-3px);
+
+    box-shadow:
+        0 0 40px rgba(229,9,20,.65);
+}
+
+.btn-secondary {
+    color: white;
+
+    background:
+        rgba(5,5,5,.65);
+
+    border:
+        1px solid rgba(229,9,20,.40);
+}
+
+.btn-secondary:hover {
+    color: var(--red-glow);
+
+    border-color:
+        var(--red);
+
+    background:
+        rgba(229,9,20,.08);
+}
+
+/* =====================================================
+   SECTIONS
+===================================================== */
+
+section {
+    padding: 90px 0;
+}
+
+.section-title {
+    text-align: center;
+
+    font-size: 34px;
+
+    font-weight: 900;
+
+    margin-bottom: 12px;
+
+    color: white;
+
+    text-shadow:
+        0 0 20px rgba(229,9,20,.30);
+}
+
+.section-title span {
+    color: var(--red-glow);
+}
+
+.section-desc {
+    text-align: center;
+
+    color: var(--gray);
+
+    max-width: 650px;
+
+    line-height: 1.9;
+
+    margin:
+        0 auto 45px;
+}
+
+/* =====================================================
+   CARDS
+===================================================== */
+
+.grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            auto-fit,
+            minmax(280px, 1fr)
+        );
+
+    gap: 22px;
+}
+
+.card {
+    position: relative;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(25,8,10,.90),
+            rgba(7,7,7,.96)
+        );
+
+    border:
+        1px solid rgba(229,9,20,.22);
+
+    border-radius: 16px;
+
+    transition: .4s;
+
+    box-shadow:
+        0 15px 40px rgba(0,0,0,.30);
+}
+
+.card::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+    right: 0;
+
+    height: 2px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            var(--red),
+            transparent
+        );
+
+    opacity: .5;
+}
+
+.card:hover {
+    transform:
+        translateY(-9px);
+
+    border-color:
+        rgba(229,9,20,.70);
+
+    box-shadow:
+        0 20px 50px rgba(229,9,20,.20);
+}
+
+/* CARD IMAGE */
+
+.card-img {
+    height: 185px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 62px;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(229,9,20,.25),
+            transparent 65%
+        ),
+        #0a0506;
+
+    border-bottom:
+        1px solid rgba(229,9,20,.20);
+
+    text-shadow:
+        0 0 30px var(--red-glow);
+}
+
+.card-body {
+    padding: 25px;
+}
+
+/* TAG */
+
+.tag {
+    display: inline-block;
+
+    color: var(--red-glow);
+
+    background:
+        rgba(229,9,20,.10);
+
+    border:
+        1px solid rgba(229,9,20,.30);
+
+    border-radius: 20px;
+
+    padding: 4px 13px;
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    margin-bottom: 12px;
+}
+
+.card h3 {
+    font-size: 19px;
+
+    margin-bottom: 12px;
+
+    color: white;
+}
+
+.card p {
+    color: var(--gray);
+
+    font-size: 14px;
+
+    line-height: 1.9;
+
+    margin-bottom: 18px;
+}
+
+.read-more {
+    color: var(--red-glow);
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    font-weight: 800;
+
+    transition: .3s;
+}
+
+.read-more:hover {
+    color: white;
+
+    text-shadow:
+        0 0 12px var(--red-glow);
+}
+
+/* =====================================================
+   TOOLS
+===================================================== */
+
+.tools {
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            auto-fit,
+            minmax(160px, 1fr)
+        );
+
+    gap: 18px;
+}
+
+.tool {
+    text-align: center;
+
+    padding: 28px 15px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(25,8,10,.85),
+            rgba(7,7,7,.95)
+        );
+
+    border:
+        1px solid rgba(229,9,20,.20);
+
+    border-radius: 14px;
+
+    transition: .3s;
+}
+
+.tool:hover {
+    transform:
+        translateY(-7px);
+
+    border-color:
+        var(--red);
+
+    box-shadow:
+        0 0 30px rgba(229,9,20,.22);
+}
+
+.tool .icon {
+    font-size: 40px;
+
+    margin-bottom: 10px;
+
+    filter:
+        drop-shadow(
+            0 0 10px
+            rgba(229,9,20,.35)
+        );
+}
+
+.tool h4 {
+    font-size: 16px;
+}
+
+.tool span {
+    display: block;
+
+    color: var(--gray);
+
+    font-size: 10px;
+
+    margin-top: 5px;
+
+    letter-spacing: 1px;
+}
+
+/* =====================================================
+   STATS
+===================================================== */
+
+.stats {
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            auto-fit,
+            minmax(180px, 1fr)
+        );
+
+    gap: 18px;
+
+    margin-top: 50px;
+}
+
+.stat {
+    text-align: center;
+
+    padding: 25px;
+
+    background:
+        rgba(229,9,20,.045);
+
+    border:
+        1px solid rgba(229,9,20,.15);
+
+    border-radius: 14px;
+}
+
+.stat strong {
+    display: block;
+
+    color: var(--red-glow);
+
+    font-size: 32px;
+
+    font-weight: 900;
+
+    text-shadow:
+        0 0 15px rgba(229,9,20,.35);
+}
+
+.stat span {
+    color: var(--gray);
+
+    font-size: 13px;
+}
+
+/* =====================================================
+   DIVIDER
+===================================================== */
+
+.divider {
+    width: 100%;
+
+    height: 1px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(229,9,20,.45),
+            transparent
+        );
+}
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer {
+    background:
+        linear-gradient(
+            180deg,
+            #090303,
+            #030303
+        );
+
+    border-top:
+        1px solid rgba(229,9,20,.25);
+
+    padding:
+        60px 20px 100px;
+
+    text-align: center;
+}
+
+.footer-logo {
+    font-size: 25px;
+
+    font-weight: 900;
+
+    margin-bottom: 10px;
+}
+
+.footer-logo span {
+    color: var(--red-glow);
+}
+
+footer p {
+    color: var(--gray);
+
+    line-height: 1.9;
+}
+
+.socials {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 12px;
+
+    margin: 25px 0;
+}
+
+.socials a {
+    width: 43px;
+
+    height: 43px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    color: white;
+
+    text-decoration: none;
+
+    background:
+        rgba(229,9,20,.07);
+
+    border:
+        1px solid rgba(229,9,20,.30);
+
+    transition: .3s;
+}
+
+.socials a:hover {
+    background:
+        var(--red);
+
+    box-shadow:
+        0 0 20px
+        var(--red-glow);
+
+    transform:
+        translateY(-4px);
+}
+
+/* =====================================================
+   MOBILE NAV
+===================================================== */
+
+.mobile-nav {
+    display: none;
+}
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 768px) {
+
+    nav {
+        display: none;
+    }
+
+    .nav {
+        justify-content: center;
+    }
+
+    .logo-text {
+        font-size: 16px;
+    }
+
+    .hero-image {
+        height: 420px;
+    }
+
+    .hero-content {
+        padding:
+            35px 15px 50px;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .hero p {
+        font-size: 14px;
+    }
+
+    section {
+        padding: 65px 0;
+    }
+
+    .section-title {
+        font-size: 28px;
+    }
+
+    /* شريط الموبايل */
+
+    .mobile-nav {
+        position: fixed;
+
+        display: flex;
+
+        left: 0;
+        right: 0;
+        bottom: 0;
+
+        height: 70px;
+
+        z-index: 9999;
+
+        background:
+            rgba(5,5,5,.95);
+
+        backdrop-filter:
+            blur(18px);
+
+        border-top:
+            1px solid rgba(229,9,20,.25);
+
+        justify-content:
+            space-around;
+
+        align-items:
+            center;
+    }
+
+    .mobile-nav a {
+        color: #817575;
+
+        text-decoration: none;
+
+        text-align: center;
+
+        font-size: 10px;
+
+        font-weight: 700;
+
+        transition: .3s;
+    }
+
+    .mobile-nav a span {
+        display: block;
+
+        font-size: 21px;
+
+        margin-bottom: 2px;
+    }
+
+    .mobile-nav a.active {
+        color:
+            var(--red-glow);
+
+        text-shadow:
+            0 0 12px
+            var(--red-glow);
+    }
+
+    footer {
+        padding-bottom: 110px;
+    }
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
+<header>
+
+<div class="container nav">
+
+<a href="#home" class="logo">
+
+<div class="logo-icon">
+    👑
+</div>
+
+<div class="logo-text">
+    مملكة <span>الذكاء الاصطناعي</span>
+</div>
+
+</a>
+
+
+<nav>
+
+<ul>
+
+<li>
+<a href="#home">
+الرئيسية
+</a>
+</li>
+
+<li>
+<a href="#articles">
+المقالات
+</a>
+</li>
+
+<li>
+<a href="#tools">
+أدوات المملكة
+</a>
+</li>
+
+<li>
+<a href="#news">
+أخبار AI
+</a>
+</li>
+
+<li>
+<a href="#about">
+تواصل معنا
+</a>
+</li>
+
+</ul>
+
+</nav>
+
+</div>
+
+</header>
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section class="hero" id="home">
+
+    <!-- صورتك -->
+    <div class="hero-image"></div>
+
+    <!-- الكلام تحت الصورة -->
+    <div class="hero-content">
+
+        <div class="hero-badge">
+            🤖 AI KINGDOM · DIGITAL INTELLIGENCE
+        </div>
+
+        <h1>
+            مملكة
+            <span>الذكاء الاصطناعي</span>
+        </h1>
+
+        <p>
+            محتوى احترافي · شروحات · أدوات · أخبار AI
+            <br>
+            كل ما تحتاجه لدخول عالم الذكاء الاصطناعي
+            وتطوير مهاراتك خطوة بخطوة.
+        </p>
+
+        <div class="hero-buttons">
+
+            <a href="#articles"
+            class="btn btn-primary">
+
+                ⚔️ ادخل المملكة
+
+            </a>
+
+            <a href="#tools"
+            class="btn btn-secondary">
+
+                استكشف الأدوات
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     ARTICLES
+===================================================== -->
+
+<section id="articles">
+
+<div class="container">
+
+
+<h2 class="section-title">
+
+أحدث
+<span>مقالات المملكة</span>
+
+</h2>
+
+
+<p class="section-desc">
+
+كل ما تحتاجه لتتقن الذكاء الاصطناعي
+وتستخدم أدواته باحتراف.
+
+</p>
+
+
+<div class="grid">
+
+
+<!-- CARD 1 -->
+
+<article class="card">
+
+<div class="card-img">
+🧠
+</div>
+
+<div class="card-body">
+
+<span class="tag">
+شروحات
+</span>
+
+<h3>
+دليل ChatGPT الكامل
+</h3>
+
+<p>
+اتعلم إزاي تستخدم ChatGPT
+وتكتب Prompts احترافية
+للحصول على أفضل النتائج.
+</p>
+
+<a href="#" class="read-more">
+اقرأ المقال ←
+</a>
+
+</div>
+
+</article>
+
+
+<!-- CARD 2 -->
+
+<article class="card">
+
+<div class="card-img">
+🎨
+</div>
+
+<div class="card-body">
+
+<span class="tag">
+أدوات
+</span>
+
+<h3>
+Midjourney وصناعة الصور
+</h3>
+
+<p>
+تعرف على أدوات الذكاء الاصطناعي
+التي تساعدك على إنشاء صور مذهلة.
+</p>
+
+<a href="#" class="read-more">
+اقرأ المقال ←
+</a>
+
+</div>
+
+</article>
+
+
+<!-- CARD 3 -->
+
+<article class="card">
+
+<div class="card-img">
+✨
+</div>
+
+<div class="card-body">
+
+<span class="tag">
+أخبار AI
+</span>
+
+<h3>
+Gemini ضد Claude
+</h3>
+
+<p>
+مقارنة عملية بين أشهر نماذج
+الذكاء الاصطناعي الحديثة.
+</p>
+
+<a href="#" class="read-more">
+اقرأ المقال ←
+</a>
+
+</div>
+
+</article>
+
+
+<!-- CARD 4 -->
+
+<article class="card">
+
+<div class="card-img">
+⚙️
+</div>
+
+<div class="card-body">
+
+<span class="tag">
+أتمتة
+</span>
+
+<h3>
+خلّي AI يشتغل مكانك
+</h3>
+
+<p>
+استخدم الأتمتة لتنفيذ المهام
+المتكررة وتوفير وقتك.
+</p>
+
+<a href="#" class="read-more">
+اقرأ المقال ←
+</a>
+
+</div>
+
+</article>
+
+
+<!-- CARD 5 -->
+
+<article class="card">
+
+<div class="card-img">
+💰
+</div>
+
+<div class="card-body">
+
+<span class="tag">
+ربح أونلاين
+</span>
+
+<h3>
+طرق الربح بالذكاء الاصطناعي
+</h3>
+
+<p>
+أفكار عملية لاستخدام مهارات
+AI في العمل أونلاين.
+</p>
+
+<a href="#" class="read-more">
+اقرأ المقال ←
+</a>
+
+</div>
+
+</article>
+
+
+<!-- CARD 6 -->
+
+<article class="card">
+
+<div class="card-img">
+🚀
+</div>
+
+<div class="card-body">
+
+<span class="tag">
+Prompt Engineering
+</span>
+
+<h3>
+أسرار كتابة البرومبت
+</h3>
+
+<p>
+تقنيات متقدمة للحصول على
+نتائج أقوى من أدوات AI.
+</p>
+
+<a href="#" class="read-more">
+اقرأ المقال ←
+</a>
+
+</div>
+
+</article>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<div class="divider"></div>
+
+
+<!-- =====================================================
+     TOOLS
+===================================================== -->
+
+<section id="tools">
+
+<div class="container">
+
+
+<h2 class="section-title">
+
+أدوات
+<span>المملكة</span>
+
+</h2>
+
+
+<p class="section-desc">
+
+جيش من أدوات الذكاء الاصطناعي
+تحت قيادتك.
+
+</p>
+
+
+<div class="tools">
+
+
+<div class="tool">
+<div class="icon">🤖</div>
+<h4>ChatGPT</h4>
+<span>TEXT · CODE</span>
+</div>
+
+
+<div class="tool">
+<div class="icon">🎨</div>
+<h4>Midjourney</h4>
+<span>IMAGES</span>
+</div>
+
+
+<div class="tool">
+<div class="icon">✨</div>
+<h4>Gemini</h4>
+<span>GOOGLE AI</span>
+</div>
+
+
+<div class="tool">
+<div class="icon">🧿</div>
+<h4>Claude</h4>
+<span>AI ASSISTANT</span>
+</div>
+
+
+<div class="tool">
+<div class="icon">🌊</div>
+<h4>Stable Diffusion</h4>
+<span>IMAGES</span>
+</div>
+
+
+<div class="tool">
+<div class="icon">🎬</div>
+<h4>Runway</h4>
+<span>VIDEO</span>
+</div>
+
+
+<div class="tool">
+<div class="icon">🎙️</div>
+<h4>ElevenLabs</h4>
+<span>VOICE</span>
+</div>
+
+
+<div class="tool">
+<div class="icon">⚡</div>
+<h4>Make / Zapier</h4>
+<span>AUTOMATION</span>
+</div>
+
+
+</div>
+
+
+<!-- STATS -->
+
+<div class="stats">
+
+
+<div class="stat">
+
+<strong>
+50+
+</strong>
+
+<span>
+أداة AI
+</span>
+
+</div>
+
+
+<div class="stat">
+
+<strong>
+100+
+</strong>
+
+<span>
+شرح ودليل
+</span>
+
+</div>
+
+
+<div class="stat">
+
+<strong>
+24/7
+</strong>
+
+<span>
+محتوى جديد
+</span>
+
+</div>
+
+
+<div class="stat">
+
+<strong>
+AI
+</strong>
+
+<span>
+تقنيات المستقبل
+</span>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     NEWS
+===================================================== -->
+
+<section id="news">
+
+<div class="container">
+
+<h2 class="section-title">
+
+آخر
+<span>أخبار AI</span>
+
+</h2>
+
+<p class="section-desc">
+
+تابع أهم التطورات والأخبار
+في عالم الذكاء الاصطناعي.
+
+</p>
+
+
+<div class="grid">
+
+
+<article class="card">
+
+<div class="card-img">
+🔥
+</div>
+
+<div class="card-body">
+
+<span class="tag">
+TRENDING
+</span>
+
+<h3>
+أحدث تقنيات الذكاء الاصطناعي
+</h3>
+
+<p>
+اكتشف التقنيات الجديدة التي
+تغير طريقة استخدامنا للـAI.
+</p>
+
+<a href="#" class="read-more">
+اقرأ المزيد ←
+</a>
+
+</div>
+
+</article>
+
+
+<article class="card">
+
+<div class="card-img">
+🤖
+</div>
+
+<div class="card-body">
+
+<span class="tag">
+AI NEWS
+</span>
+
+<h3>
+مستقبل المساعدات الذكية
+</h3>
+
+<p>
+كيف ستتغير طريقة تعاملنا
+مع المساعدات الذكية؟
+</p>
+
+<a href="#" class="read-more">
+اقرأ المزيد ←
+</a>
+
+</div>
+
+</article>
+
+
+<article class="card">
+
+<div class="card-img">
+🚀
+</div>
+
+<div class="card-body">
+
+<span class="tag">
+FUTURE
+</span>
+
+<h3>
+إلى أين يتجه الذكاء الاصطناعي؟
+</h3>
+
+<p>
+نظرة على مستقبل التكنولوجيا
+والذكاء الاصطناعي.
+</p>
+
+<a href="#" class="read-more">
+اقرأ المزيد ←
+</a>
+
+</div>
+
+</article>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer id="about">
+
+<div class="footer-logo">
+
+👑 مملكة
+<span>
+الذكاء الاصطناعي
+</span>
+
+</div>
+
+
+<p>
+
+محتوى احترافي · شروحات · أدوات · آخر الأخبار
+
+</p>
+
+
+<div class="socials">
+
+<a href="#">
+▶
+</a>
+
+<a href="#">
+✈
+</a>
+
+<a href="#">
+◎
+</a>
+
+<a href="#">
+𝕏
+</a>
+
+</div>
+
+
+<p>
+
+© 2026
+<b>
+AI Kingdom
+</b>
+
+— جميع الحقوق محفوظة للمملكة 👑
+
+</p>
+
+</footer>
+
+
+<!-- =====================================================
+     MOBILE NAVIGATION
+===================================================== -->
+
+<div class="mobile-nav">
+
+<a href="#home" class="active">
+
+<span>
+⌂
+</span>
+
+الرئيسية
+
+</a>
+
+
+<a href="#articles">
+
+<span>
+▤
+</span>
+
+المقالات
+
+</a>
+
+
+<a href="#tools">
+
+<span>
+⚡
+</span>
+
+الأدوات
+
+</a>
+
+
+<a href="#news">
+
+<span>
+✦
+</span>
+
+الأخبار
+
+</a>
+
+
+<a href="#about">
+
+<span>
+●
+</span>
+
+تواصل
+
+</a>
+
+</div>
+
+
+</body>
+</html>
